@@ -1,51 +1,50 @@
-1. Συμβατοτητα
+1. Compatibility
 
-Το προγραμμα αυτο χρησιμοποιει την wxpython 2.8 για την εκδοση
-2.7.2 της python (windows 64bit) και ενδεχεται να μην λειτουργει
-αν καποιο απο τα παραπανω δεν εχει εγκατασταθει σωστα.
+This program uses wxpython 2.8 for the release
+2.7.2 of python (windows 64bit) and may not work
+if any of the above is not installed correctly.
 
-2. Λειτουργεια
 
-Ο συγχρονισμος των 2 παραθυρων γινεται χειροκινητα
--Το 1ο παραθυρο (project1.py) εμφανιζει τα δεδομενα του αρχειου σε Hex (δεκαεξαδικο)
--Καθε αλλαγη που θελετε να κανετε ΠΡΙΝ φτασει το αρχειο στην τελικη
-του μορφη πρεπει να αποθηκευεται με το ονομα hex1.txt
--Αφου δημιουργηθει το παραπανω αρχειο, πατοντας το κουμπι Refresh
-στο 2ο παραθυρο (project2.py) εμφανιζονται τα δεδομενα (με τις οποιες
-τροποποιησεις) σε μορφη ascii. Παλι, καθε αλλαγη πρεπει να αποθηκευεται
-σε αρχειο με το ονομα ascii1.txt
--Μολις δημιουργηθει αυτο το αρχειο πατοντας Refresh στο 1ο παραθυρο
-περνανε οι αλλαγες που κανατε στο δεκαεξαδικο αρχειο.
--Οποτε θελετε μπορειτε να αποθηκευσετε το τελικο σας αρχειο με
-οποιοδηποτε ονομα.
+2. Operation
 
-3.Συχνες ερωτησεις
+Synchronization of the 2 windows is done manually
+-The first window (project1.py) displays the data of the file in Hex (hexadecimal)
+-Any change you want to make before the file reaches the final
+the format must be saved as hex1.txt
+-After the above file is created, by tapping the Refresh button
+ the 2nd window (project2.py) will display the data (with any
+modifications) in ascii format. Again, every change must be saved
+in a file named ascii1.txt
+-After this file is created by tapping Refresh in the 1st window
+the changes you made to the hexadecimal file will be passed.
+-Whenever you want you can save your final file with
+any name.
 
--'Οι αλλαγες που κανω δεν περνανε απο το ενα παραθυρο στο αλλο.
-Φταιει ο τυπος του αρχειου?'
+3. Frequently Asked Questions
 
-Απαντηση: Ο τυπος του αρχειου δεν εχει σημασια αφου μιλαμε για δεκαεξαδικο
-συντακτη. Υπαρχουν 3 πιθανες αιτιες για το προβλημα:
+-The changes I make do not go from one window to the other.
 
-   1.Δεν ακολουθειτε κατα γραμμα τις παραπανω οδηγιες.
+Answer:  There are 2 possible causes for the problem:
 
-   2.Εχετε αποθηκευσει τα αρχεια hex1.txt , ascii1.txt εξω απο το
-φακελο του προγραμματος οποτε δεν τα βρισκει.
+  
 
-   3.Το παραθυρο δεκαεξαδικου αναγνωριζει τους χαρακτηρες 
-1,2,3,4,5,6,7,8,9,0,a,b,c,d,e,f και αποκλειστικα ανα ζευγη,
-αν γραψατε κατι που δεν αναγνωριζεται (η ενα ζευγος που δεν
-αντιστοιχιζεται σε ascii) οι αλλαγες σας δεν θα μπορουν να
-μεταφερθουν στο παραθυρο ascii. Επισης, αν ο αριθμος των 
-χαρακτηρων στο δεκαεξαδικο παραθυρο δεν ειναι ζυγος, ενδεχεται να λειπουν
-χαρακτηρες απο το παραθυρο ascii ή ακομα και να ειναι το παραθυρο αυτο
-τελειως κενο!
+   1. You have saved the hex1.txt, ascii1.txt files out of the
+folder of the program.
 
-4.Αντιμετοπηση προβληματων
+   2. The hexadecimal window recognizes the characters
+1,2,3,4,5,6,7,8,9,0, a, b, c, d, e, f and exclusively paired,
+if you wrote something that is not recognized (or a pair that is not mapped to ascii) 
+your changes will not be able to
+be moved to the ascii window. Also, if the number of
+characters on the hexadecimal window is not even, there may be missing
+characters from the ascii window or that window may be
+completely empty!
 
-Προτεινεται οταν κλεινετε το προγραμμα να διαγραφετε τα προσωρινα
-αρχεια hex1, ascii1 ετσι ωστε να μην ανοιξετε λαθος αρχειο σε
-μελλοντικη χρηση, αν ξεχαστειτε και πατησετε Refresh
+4.Troubleshooting
 
-Το πληκτρο Refresh δεν κανει τιποτα αν δεν υπαρχουν τα αντιστοιχα
-προσωρινα αρχεια που αναφερθηκαν παραπανω (hex1.txt , ascii1.txt) 
+It is recommended when you close the program to delete the temporarily
+files hex1, ascii1 so that you do not open the wrong file in
+future use, if you accidentally press Refresh
+
+The Refresh button does nothing unless the corresponding
+temporary files described above (hex1.txt, ascii1.txt) exist.
